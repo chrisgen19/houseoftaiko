@@ -176,3 +176,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function custom_styles() {
+	wp_enqueue_style( 'taiko-style', get_template_directory_uri() . '/css/homepage/main.css' );
+}
+add_action( 'wp_enqueue_scripts', 'custom_styles' );
