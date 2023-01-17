@@ -30,5 +30,19 @@
 
 <?php wp_footer(); ?>
 
+<script>
+	const heroSlider = document.querySelector('.hero-slider');
+	const heroSlides = document.querySelectorAll('.hero-slide');
+	let currentSlide = 0;
+
+	function showNextSlide() {
+	heroSlides[currentSlide].classList.remove('active');
+	currentSlide = (currentSlide + 1) % heroSlides.length;
+	heroSlides[currentSlide].classList.add('active');
+	}
+
+	setInterval(showNextSlide, 5000); /* This will change the slide every 5 seconds */
+</script>
+
 </body>
 </html>

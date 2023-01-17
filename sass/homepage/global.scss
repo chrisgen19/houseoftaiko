@@ -1,0 +1,35 @@
+/* GLOBAL */
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 750px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 970px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1440px;
+        min-width: 304px;
+        //max-width: 1440px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}

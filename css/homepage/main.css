@@ -1,5 +1,209 @@
+/*RESET*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul {
+  padding: 0px;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* GLOBAL */
+* {
+  font-family: "Lato", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 970px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1440px;
+    min-width: 304px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+/* HEADER */
+header {
+  background: black;
+}
+header .site-head {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  min-height: 110px;
+  gap: 100px;
+}
+header .site-head .main-navigation ul.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+header .site-head .main-navigation ul.nav-menu li a {
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  color: #FFF;
+  font-weight: 300;
+}
+
+/* HERO */
+.hero {
+  background: #000;
+}
+.hero .hero-img {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+.hero .hero-img img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
 body {
-  background: red;
+  background: #CCC;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,28 @@
+/* HEADER */
+
+header {
+    background: black;
+    .site-head {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        min-height: 110px;
+        gap: 100px;
+        .main-navigation {
+            ul {
+                &.nav-menu {
+                    display: flex;
+                    gap: 30px;
+                    li {
+                        a {
+                            font-family: 'Lato', sans-serif;
+                            text-transform: uppercase;
+                            color: #FFF;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
