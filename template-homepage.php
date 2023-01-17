@@ -34,6 +34,19 @@ get_header();
         </div>
     </section>
 
+    <section id="our-story" class="our-story">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    pic
+                </div>
+                <div class="col">
+                    text
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 </main>
 
