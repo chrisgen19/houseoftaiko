@@ -438,7 +438,7 @@ q {
 @media only screen and (max-width: 600px) {
   .mySlides {
     display: none;
-    padding: 0px;
+    padding: 25px 0;
     text-align: center;
   }
 }
