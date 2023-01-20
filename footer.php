@@ -12,36 +12,49 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'houseoftaiko' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'houseoftaiko' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'houseoftaiko' ), 'houseoftaiko', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+		<div class="container">
+			<div class="site-info">
+				<a href="/">
+					<?php
+					/* translators: %s: CMS name, i.e. WordPress. */
+					printf( esc_html__( 'House of Taiko %s', 'houseoftaiko' ), '&copy;' );
+					?>
+				</a>
+			</div><!-- .site-info -->
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
+
 <script>
-	const heroSlider = document.querySelector('.hero-slider');
-	const heroSlides = document.querySelectorAll('.hero-slide');
-	let currentSlide = 0;
+var slideIndex = 1;
+showSlides(slideIndex);
 
-	function showNextSlide() {
-	heroSlides[currentSlide].classList.remove('active');
-	currentSlide = (currentSlide + 1) % heroSlides.length;
-	heroSlides[currentSlide].classList.add('active');
-	}
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-	setInterval(showNextSlide, 5000); /* This will change the slide every 5 seconds */
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
 </script>
 
 </body>

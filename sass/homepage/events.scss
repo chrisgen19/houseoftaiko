@@ -1,0 +1,46 @@
+/* EVENTS */
+
+.events {
+    background-color: #000;
+    padding: 100px 0;
+    .section-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+}
+
+.events-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .event {
+        .concertname {
+            text-align: center;
+            margin-top: 30px;
+            .c1,
+            .c2 {
+                p {
+                    color: #b9100e;
+                    font-weight: 700;
+                }
+            }
+            .details {
+                margin-top: 10px;
+            }
+            p {
+                color: #FFF;
+            }
+            ul {
+                li {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+
+.promo {
+    background-color: #000;
+}

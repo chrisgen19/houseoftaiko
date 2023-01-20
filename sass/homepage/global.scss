@@ -1,7 +1,18 @@
 /* GLOBAL */
 
+html {
+    f0nt-size: 16px;
+}
+
 * {
     font-family: 'Lato', sans-serif;
+}
+
+.container {
+    padding: 0 25px;
+    &.relative {
+        position: relative;
+    }
 }
 
 @media only screen and (min-width: 768px) {

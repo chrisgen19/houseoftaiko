@@ -19,7 +19,24 @@ header {
                             text-transform: uppercase;
                             color: #FFF;
                             font-weight: 300;
+                            &:hover {
+                                color: red;
+                            }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        .site-head {
+            .main-navigation {
+                ul {
+                    &.nav-menu {
+                        display: none;
                     }
                 }
             }
