@@ -214,9 +214,73 @@ header .site-head .main-navigation ul.nav-menu li a:hover {
   color: red;
 }
 
+/* NAV MENU */
+.main-navigation {
+  position: relative;
+}
+
+/* Menu button styles */
+.menu-btn {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Menu button burger styles */
+.menu-btn-burger {
+  width: 100%;
+  height: 2px;
+  background-color: #FFF;
+  margin: 6px 0;
+}
+
+/* Add animation to the burger lines */
+.menu-btn-burger:before,
+.menu-btn-burger:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #FFF;
+  position: absolute;
+  left: 0;
+  transition: all 0.2s ease;
+}
+
+.menu-btn-burger:before {
+  top: -6px;
+}
+
+.menu-btn-burger:after {
+  top: 6px;
+}
+
+/* Change the appearance of the burger lines on menu open */
+.menu-btn.open .menu-btn-burger {
+  background-color: transparent;
+}
+
+.menu-btn.open .menu-btn-burger:before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu-btn.open .menu-btn-burger:after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
 @media only screen and (max-width: 600px) {
+  header .site-head {
+    justify-content: space-between;
+  }
   header .site-head .main-navigation ul.nav-menu {
     display: none;
+  }
+  header .site-head .main-navigation.toggled ul.nav-menu {
+    display: block;
   }
 }
 /* HERO */
