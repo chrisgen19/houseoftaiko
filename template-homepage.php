@@ -82,8 +82,7 @@ get_header();
                 <div class="events-row">
                     <div class="event">
                         <picture>
-                            <source media="(orientation: portrait)" srcset="/wp-content/themes/improv/images/purple/hero-header-resize-mobile.webp" type="image/webp">
-                            <source media="(orientation: portrait)" srcset="/wp-content/themes/improv/images/purple/hero-header-resize-mobile.png" type="image/png">
+                            <source media="(orientation: portrait)" srcset="<?php echo get_template_directory_uri() . '/images/events/event-1-270.webp'; ?>" type="image/webp">
                             <source srcset="<?php echo get_template_directory_uri() . '/images/events/event-1.webp'; ?>" type="image/webp">
                             <img class="event-1" src="?php echo get_template_directory_uri() . '/images/events/event-1.png'; ?>" alt="purple main" >
                         </picture>
@@ -101,8 +100,7 @@ get_header();
                     </div>
                     <div class="event">
                         <picture>
-                            <source media="(orientation: portrait)" srcset="/wp-content/themes/improv/images/purple/hero-header-resize-mobile.webp" type="image/webp">
-                            <source media="(orientation: portrait)" srcset="/wp-content/themes/improv/images/purple/hero-header-resize-mobile.png" type="image/png">
+                            <source media="(orientation: portrait)" srcset="<?php echo get_template_directory_uri() . '/images/events/event-2-270.webp'; ?>" type="image/webp">
                             <source srcset="<?php echo get_template_directory_uri() . '/images/events/event-2.webp'; ?>" type="image/webp">
                             <img class="event-1" src="?php echo get_template_directory_uri() . '/images/events/event-2.png'; ?>" alt="purple main" >
                         </picture>
@@ -120,8 +118,7 @@ get_header();
                     </div>
                     <div class="event">
                         <picture>
-                            <source media="(orientation: portrait)" srcset="/wp-content/themes/improv/images/purple/hero-header-resize-mobile.webp" type="image/webp">
-                            <source media="(orientation: portrait)" srcset="/wp-content/themes/improv/images/purple/hero-header-resize-mobile.png" type="image/png">
+                            <source media="(orientation: portrait)" srcset="<?php echo get_template_directory_uri() . '/images/events/event-3-270.webp'; ?>" type="image/webp">
                             <source srcset="<?php echo get_template_directory_uri() . '/images/events/event-3.webp'; ?>" type="image/webp">
                             <img class="event-1" src="?php echo get_template_directory_uri() . '/images/events/event-3.png'; ?>" alt="purple main" >
                         </picture>
@@ -148,8 +145,7 @@ get_header();
     <section id="promo" class="promo">
         <div class="container">
             <picture>
-                <source media="(orientation: portrait)" srcset="/wp-content/themes/improv/images/purple/hero-header-resize-mobile.webp" type="image/webp">
-                <source media="(orientation: portrait)" srcset="/wp-content/themes/improv/images/purple/hero-header-resize-mobile.png" type="image/png">
+                <source media="(orientation: portrait)" srcset="<?php echo get_template_directory_uri() . '/images/promo-375.webp'; ?>" type="image/webp">
                 <source srcset="<?php echo get_template_directory_uri() . '/images/promo.webp'; ?>" type="image/webp">
                 <img class="event-1" src="?php echo get_template_directory_uri() . '/images/promo.png'; ?>" alt="purple main" >
             </picture>
