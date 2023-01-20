@@ -41,7 +41,7 @@ get_header();
                     <img src="<?php echo get_template_directory_uri() . '/images/taiko-baler.jpg'; ?>" alt="Taiko Baler">
                 </div>
                 <div class="col our-story-head">
-                    <img src="<?php echo get_template_directory_uri() . '/images/our-story.png'; ?>" alt="Our Story">
+                    <h2 class="entry-title">Our Story</h2>
                     <p>House of Taiko is a world-class food business that started at the height of the COVID-19 pandemic in 2020 to offer premium and authentic homemade takoyaki within the confines of CEO Lemuel Belaro's local community. Backed by his culinary expertise, Lemuel's innate love for Japanese cuisine and his family's chocolate business, Lala chocolates, allowed him to further pursue his very own commissary.</p>
                 </div>
             </div>
@@ -76,7 +76,7 @@ get_header();
     <section id="events" class="events" >
         <div class="container">
             <div class="section-header">
-                <img src="<?php echo get_template_directory_uri() . '/images/events.png'; ?>" alt="events" />
+                <h2 class="entry-title">Events</h2>
             </div>
             <div class="section-content">
                 <div class="events-row">

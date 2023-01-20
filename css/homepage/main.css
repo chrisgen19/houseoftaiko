@@ -176,6 +176,19 @@ html {
     padding-left: 40px;
   }
 }
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
+h1.entry-title,
+h2.entry-title {
+  font-family: "harukaze", sans-serif;
+  color: #FFF;
+  font-size: 4rem;
+  padding-bottom: 20px;
+}
+
 /* HEADER */
 header {
   background: black;
@@ -221,6 +234,11 @@ header .site-head .main-navigation ul.nav-menu li a:hover {
   height: auto;
 }
 
+@media only screen and (max-width: 600px) {
+  .hero .hero-img {
+    height: fit-content;
+  }
+}
 /* STORY */
 .our-story {
   background: #000;
@@ -426,8 +444,9 @@ body {
   padding: 50px 0;
 }
 .page-content .entry-title {
-  font-size: 2rem;
+  font-size: 4rem;
   text-align: center;
+  font-family: "harukaze", sans-serif;
 }
 .page-content p {
   font-family: "Lato", sans-serif;
@@ -442,6 +461,12 @@ body {
 }
 .page-content .entry-content img {
   padding: 30px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .page-content .entry-content {
+    padding: 0px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
