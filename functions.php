@@ -180,3 +180,24 @@ function custom_styles() {
 	wp_enqueue_style( 'taiko-style', get_template_directory_uri() . '/css/homepage/main.css' );
 }
 add_action( 'wp_enqueue_scripts', 'custom_styles' );
+
+/* CUSTOM */ 
+
+function create_event_post_type() {
+    register_post_type('event',
+        array(
+            'labels' => array(
+                'name' => __('Events'),
+                'singular_name' => __('Event')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array('title', 'editor', 'thumbnail'),
+            'taxonomies' => array('category', 'post_tag'),
+        )
+    );
+}
+add_action('init', 'create_event_post_type');
+
+add_image_size( 'event-thumbnail', 355, 355, true );
+add_image_size( 'event-thumbnail-mobile', 270, 270, true );

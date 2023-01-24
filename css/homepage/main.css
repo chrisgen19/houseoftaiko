@@ -494,6 +494,9 @@ q {
 .events-row .event .concertname ul li {
   color: #FFF;
 }
+.events-row .event .concertname a {
+  text-decoration: none;
+}
 
 .promo {
   background-color: #000;

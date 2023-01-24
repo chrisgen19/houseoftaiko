@@ -80,63 +80,59 @@ get_header();
             </div>
             <div class="section-content">
                 <div class="events-row">
+
+
+                <?php
+                    $args = array(
+                        'post_type' => 'event',
+                        'posts_per_page' => 3
+                    );
+                    $events = new WP_Query($args);
+                ?>
+                <?php if ($events->have_posts()) : while ($events->have_posts()) : $events->the_post(); ?>
                     <div class="event">
+
                         <picture>
-                            <source media="(orientation: portrait)" srcset="<?php echo get_template_directory_uri() . '/images/events/event-1-270.webp'; ?>" type="image/webp">
-                            <source srcset="<?php echo get_template_directory_uri() . '/images/events/event-1.webp'; ?>" type="image/webp">
-                            <img class="event-1" src="?php echo get_template_directory_uri() . '/images/events/event-1.png'; ?>" alt="purple main" >
+                            <source media="(orientation: portrait)" srcset="<?php the_post_thumbnail_url('event-thumbnail-mobile'); ?>" type="image/webp">
+                            <source srcset="<?php the_post_thumbnail_url('event-thumbnail'); ?>" type="image/webp">
+                            <img class="event-img" src="<?php the_post_thumbnail_url('event-thumbnail'); ?>" alt="<?php the_title(); ?>" >
                         </picture>
+
                         <div class="concertname">
-                            <div class="c1">
-                                <p>"MAGBALIK:</p>
-                            </div>
-                            <div class="c2">
-                                <p>LILY CONCERT</p>
-                            </div>
-                            <div class="details">
-                                <p>Music Museum<br/>December 2<br/>8:00 PM</p>
-                            </div>
+                        <?php
+
+                        $event_name = get_field( 'event_name' );
+                        $event_name__arr = preg_split("/\r\n|\n|\r/", $event_name);
+
+                        $v = 1;
+                        foreach( $event_name__arr as $i => $ename ) :
+                        ?>
+                        <div class="c<?php echo $v; ?>">
+                            <a href="<?php the_permalink(); ?>"><p><?php echo $ename; ?></p></a>
                         </div>
-                    </div>
-                    <div class="event">
-                        <picture>
-                            <source media="(orientation: portrait)" srcset="<?php echo get_template_directory_uri() . '/images/events/event-2-270.webp'; ?>" type="image/webp">
-                            <source srcset="<?php echo get_template_directory_uri() . '/images/events/event-2.webp'; ?>" type="image/webp">
-                            <img class="event-1" src="?php echo get_template_directory_uri() . '/images/events/event-2.png'; ?>" alt="purple main" >
-                        </picture>
-                        <div class="concertname">
-                            <div class="c1">
-                                <p>"TAKE OFF:</p>
-                            </div>
-                            <div class="c2">
-                                <p>RACHEL & KIER CONCERT</p>
-                            </div>
-                            <div class="details">
-                                <p>Music Museum<br/>December 2<br/>8:00 PM</p>
-                            </div>
+                        <?php 
+                        $v++;
+                        endforeach; 
+                        ?>
+
+                        <?php
+                        echo '<div class="details">';
+                        $event_details = get_field( 'event_details' );
+                        $event_details__arr = preg_split("/\r\n|\n|\r/", $event_details);
+
+                        foreach( $event_details__arr as $i => $edetails ) :
+                        ?>
+                        <p><?php echo $edetails; ?><br/></p>
+                        <?php 
+                        endforeach; 
+                        echo '</div>';
+                        ?>
                         </div>
+                        
                     </div>
-                    <div class="event">
-                        <picture>
-                            <source media="(orientation: portrait)" srcset="<?php echo get_template_directory_uri() . '/images/events/event-3-270.webp'; ?>" type="image/webp">
-                            <source srcset="<?php echo get_template_directory_uri() . '/images/events/event-3.webp'; ?>" type="image/webp">
-                            <img class="event-1" src="?php echo get_template_directory_uri() . '/images/events/event-3.png'; ?>" alt="purple main" >
-                        </picture>
-                        <div class="concertname">
-                            <div class="c1">
-                                <p>UNLIMITED PROMO</p>
-                            </div>
-                            <div class="c2">
-                            </div>
-                            <div class="details">
-                                <ul>
-                                    <li>UNLI RAMEN</li>
-                                    <li>UNLI EGG DROP</li>
-                                    <li>UNLI RICEBOWLS</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                
+                <?php endwhile; endif; wp_reset_postdata(); ?>
+
                 </div>
             </div>
         </div>
