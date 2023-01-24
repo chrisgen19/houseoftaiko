@@ -1,26 +1,27 @@
-/* HEADER */
-
-header {
-    background: black;
-    .site-head {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        min-height: 110px;
-        gap: 100px;
-        .main-navigation {
-            ul {
-                &.nav-menu {
-                    display: flex;
-                    gap: 30px;
-                    li {
-                        a {
-                            font-family: 'Lato', sans-serif;
-                            text-transform: uppercase;
-                            color: #FFF;
-                            font-weight: 300;
-                            &:hover {
-                                color: red;
+    /* HEADER */
+    
+    header {
+        background: black;
+        .site-head {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            min-height: 110px;
+            gap: 100px;
+            .main-navigation {
+                ul {
+                    &.nav-menu {
+                        display: flex;
+                        gap: 30px;
+                        li {
+                            a {
+                                font-family: 'Lato', sans-serif;
+                                text-transform: uppercase;
+                                color: #FFF;
+                                font-weight: 300;
+                                &:hover {
+                                    color: red;
+                                }
                             }
                         }
                     }
@@ -28,94 +29,101 @@ header {
             }
         }
     }
-}
-
-
-/* NAV MENU */
-
-.main-navigation {
-    position: relative;
-}
-
-
-/* Menu button styles */
-
-.menu-btn {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-}
-
-
-/* Menu button burger styles */
-
-.menu-btn-burger {
-    width: 100%;
-    height: 2px;
-    background-color: #FFF;
-    margin: 6px 0;
-}
-
-
-/* Add animation to the burger lines */
-
-.menu-btn-burger:before,
-.menu-btn-burger:after {
-    content: "";
-    width: 100%;
-    height: 2px;
-    background-color: #FFF;
-    position: absolute;
-    left: 0;
-    transition: all 0.2s ease;
-}
-
-.menu-btn-burger:before {
-    top: -6px;
-}
-
-.menu-btn-burger:after {
-    top: 6px;
-}
-
-
-/* Change the appearance of the burger lines on menu open */
-
-.menu-btn.open .menu-btn-burger {
-    background-color: transparent;
-}
-
-.menu-btn.open .menu-btn-burger:before {
-    top: 0;
-    transform: rotate(45deg);
-}
-
-.menu-btn.open .menu-btn-burger:after {
-    top: 0;
-    transform: rotate(-45deg);
-}
-
-@media only screen and (max-width: 600px) {
-    header {
-        .site-head {
-            justify-content: space-between;
-            .main-navigation {
-                ul {
-                    &.nav-menu {
-                        display: none;
-                    }
-                }
-                &.toggled {
+    
+    @media only screen and (max-width: 600px) {
+        header {
+            .site-head {
+                justify-content: space-between;
+                .main-navigation {
                     ul {
                         &.nav-menu {
-                            display: block;
+                            display: none;
+                        }
+                    }
+                    &.toggled {
+                        ul {
+                            &.nav-menu {
+                                display: block;
+                            }
                         }
                     }
                 }
             }
         }
     }
-}
+    /* custom menu */
+    
+    .site-header .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+    
+    .site-header .menu-icon .navicon {
+        background: #fff;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }
+    
+    .site-header .menu-icon .navicon:before,
+    .site-header .menu-icon .navicon:after {
+        background: #fff;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    
+    .site-header .menu-icon .navicon:before {
+        top: 5px;
+    }
+    
+    .site-header .menu-icon .navicon:after {
+        top: -5px;
+    }
+    /* menu btn */
+    
+    .site-header .menu-btn {
+        display: none;
+    }
+    
+    .site-header .menu-btn:checked~.menu {
+        max-height: 240px;
+    }
+    
+    .site-header .menu-btn:checked~.menu-icon .navicon {
+        background: transparent;
+    }
+    
+    .site-header .menu-btn:checked~.menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+    
+    .site-header .menu-btn:checked~.menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+    
+    .site-header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+    .site-header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+        top: 0;
+    }
+    /* 48em = 768px */
+    
+    @media (min-width: 48em) {
+        .site-header .menu {
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+        .site-header .menu-icon {
+            display: none;
+        }
+    }

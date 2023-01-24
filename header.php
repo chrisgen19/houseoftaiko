@@ -54,18 +54,29 @@
 					</a>
 				</div><!-- .site-branding -->
 				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle menu-btn" aria-controls="primary-menu" aria-expanded="false">
-						<div class="menu-btn-burger" ></div>
-					</button>
+					<input class="menu-btn" type="checkbox" id="menu-btn" />
+					<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 					<?php
 					wp_nav_menu(
 						array(
 							'theme_location' => 'menu-1',
 							'menu_id'        => 'primary-menu',
+							'menu_class' => 'nav-menu'
 						)
 					);
 					?>
 				</nav><!-- #site-navigation -->
+			</div>
+			<div class="site-mobile-menu" style="display:none;">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'mobile-menu',
+						'menu_class' => 'menu'
+					)
+				);
+				?>
 			</div>
 		</div>
 	</header><!-- #masthead -->
